@@ -1,0 +1,436 @@
+
+/* General Body Styles */
+body {
+  font-family: Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+  background: url("images/o.jpg") no-repeat center center fixed;
+}
+
+/* Navigation and CTA Button Styles */
+nav a, .cta-button {
+  background: linear-gradient(45deg, #ff8c00, #ff4500);
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: all 0.4s ease-in-out;
+  display: inline-block;
+  margin: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border: none;
+}
+
+/* Navigation and CTA Button Hover Effects */
+nav a:hover, .cta-button:hover {
+  background: linear-gradient(45deg, #ff4500, #ff8c00);
+  transform: scale(1.1) translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Social Icon Hover Effect */
+.social-links img:hover {
+  transform: scale(1.2);
+}
+
+/* Header Styles */
+header {
+  background: url("images/o.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  padding: 30px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Header Overlay */
+header::before {
+  content: "";
+  font-size: 18px;
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+/* Hero Section Styles */
+.hero {
+  background: url("images/about.jpg") no-repeat center center;
+  background-size: cover;
+  font-size: 2rem;
+  font-weight: lighter;
+  padding: 5rem 1rem;
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0;
+  box-shadow: none;
+}
+
+/* Logo Styles */
+.logo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid hsl(0, 87%, 64%);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s ease-in-out;
+}
+
+/* Logo Hover Effect */
+.logo:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Main Content Styles */
+main {
+  padding: 20px;
+}
+
+/* Menu Item Styles */
+.menu-item {
+  margin: 10px 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Menu Item Text Styles */
+.item p {
+  color: #333;
+  font-weight: bold;
+}
+
+/* Menu Heading Styles */
+.grid-menu h2 {
+  font-family: 'Lobster', cursive;
+  font-size: 2.5rem;
+  color: #d35400;
+}
+
+/* General Form Styles */
+form {
+  background: hsl(240, 43%, 99%);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* General Label Styles */
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+/* General Input and Select Styles */
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Add to Cart and Remove from Cart Button Styles */
+.add-to-cart, .remove-from-cart {
+  background: linear-gradient(45deg, #ff8c00, #ff4500);
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: all 0.4s ease-in-out;
+  display: inline-block;
+  margin: 5px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border: none;
+  cursor: pointer;
+}
+
+/* Add to Cart and Remove from Cart Button Hover Effects */
+.add-to-cart:hover, .remove-from-cart:hover {
+  background: linear-gradient(45deg, #ff4500, #ff8c00);
+  transform: scale(1.1) translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Remove from Cart Button Specific Styles */
+.remove-from-cart {
+  background: linear-gradient(45deg, #a9a9a9, #808080);
+}
+
+/* Remove from Cart Button Hover Effect */
+.remove-from-cart:hover {
+  background: linear-gradient(45deg, #808080, #a9a9a9);
+}
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  padding: 10px;
+  background: #333;
+  color: hwb(22 95% 1%);
+}
+
+/* Menu Gallery Styles */
+.menu-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+/* Menu Card Styles */
+.menu-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 10px;
+  text-align: center;
+  width: 200px;
+}
+
+/* Menu Card Image Styles */
+.menu-card img {
+  width: 100%;
+  border-radius: 10px;
+  height: 150px;
+  object-fit: cover;
+}
+
+/* Owner Photo Styles */
+.owner-photo img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* General Image Styles */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Social Icon Styles */
+.social-icon {
+  width: 30px;
+  height: 30px;
+  margin: 10px;
+  transition: transform 0.3s;
+}
+
+/* Social Links Container Styles */
+.social-links {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Social Links Anchor Styles */
+.social-links a {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+/* Social Links Image Styles */
+.social-links img {
+  width: 30px;
+  height: 30px;
+  margin: 0 8px;
+  transition: transform 0.3s;
+}
+
+/* Social Links Image Hover Effect */
+.social-links img:hover {
+  transform: scale(1.2);
+}
+
+/* Menu Section Styles */
+.menu-section {
+  padding: 0;
+  margin: 0;
+  background: url("images/.jpg") no-repeat center center fixed;
+  background-size: cover;
+  width: 70px;
+  height: auto;
+}
+
+/* Cart and Modal Font Styles */
+.cart, .modal-content {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Cart and Modal Heading Styles */
+.cart h2, .modal-content h3 {
+  font-family: 'Lobster', cursive;
+  color: hsl(80, 2%, 8%);
+}
+
+/* Modal Input, Textarea, and Select Styles */
+.modal-content input[type="text"],
+.modal-content input[type="tel"],
+.modal-content textarea,
+.modal-content select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Modal Input, Textarea, and Select Focus Effects */
+.modal-content input:focus,
+.modal-content textarea:focus,
+.modal-content select:focus {
+  border-color: #ff8c00;
+  box-shadow: 0 0 8px rgba(255, 140, 0, 0.2);
+  outline: none;
+}
+
+/* Use Location and Confirm Order Button Styles */
+#useLocation, #confirmOrder {
+  background: linear-gradient(45deg, #ff8c00, #ff4500);
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: all 0.4s ease-in-out;
+  display: inline-block;
+  margin: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border: none;
+  cursor: pointer;
+}
+
+/* Use Location and Confirm Order Button Hover Effects */
+#useLocation:hover, #confirmOrder:hover {
+  background: linear-gradient(45deg, #ff4500, #ff8c00);
+  transform: scale(1.1) translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Track Order Button Styles */
+.track-order-button {
+  background: linear-gradient(45deg, #2c3e50, #34495e);
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: all 0.4s ease-in-out;
+  display: inline-block;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border: none;
+  cursor: pointer;
+}
+
+/* Track Order Button Hover Effect */
+.track-order-button:hover {
+  background: linear-gradient(45deg, #34495e, #2c3e50);
+  transform: scale(1.1) translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Track Order Form Styles */
+.track-order-form {
+  margin-top: 20px;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hero {
+    padding: 3rem 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  nav a, .cta-button {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+
+  .grid-menu {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* About Page Styles */
+.about-page {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.about-section {
+  margin-bottom: 40px;
+}
+
+.about-section h2 {
+  font-family: 'Lobster', cursive;
+  font-size: 2.5rem;
+  color: #d35400;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.about-section p, .about-section ul {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.about-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-section ul li {
+  background: #f9f9f9;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 5px solid #ff8c00;
+}
+
+.owner-section {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.owner-photo {
+  flex-shrink: 0;
+}
+
+.owner-photo img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #ff8c00;
+}

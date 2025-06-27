@@ -1,0 +1,152 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Porkyto"s📋</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fff8f1;
+      padding: 20px;
+    }
+    form {
+      max-width: 500px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      color: #d35400;
+    }
+    label {
+      margin-top: 15px;
+      display: block;
+      font-weight: 500;
+    }
+    input, select, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #f57c00;
+      color: white;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background-color: #e65100;
+    }
+    .error {
+      border-color: red;
+    }
+  </style>
+
+  <header class="hero">
+    <div class="logo-container">
+      <img src="images/logo.jpg" alt="Porkyto's Logo" class="logo" />
+    </div>
+    <nav>
+      <a href="menu_upgraded.html">Menu</a>
+      <a href="about 2.html">About</a>
+    </nav>
+    <div class="hero-content">
+      <h1>WELCOME TO POKYTOS!</h1>
+      <p>FRESH TASTY AND FUN!.</p>
+      <a href="menu_upgraded.html" class="cta-button">Order Now</a>
+    </div>
+  </header>
+  <main>
+    <section class="menu-preview">
+      <h2>  Make a order</h2>
+      <!-- Add a few featured items here -->
+    </section>
+    <section class="order-form">
+        <h2>📋 You already made an order? Check the status below</h2>
+    </section>
+    <div class="track-order-container">
+      <button class="track-order-button">Track Your Order</button>
+      <div class="track-order-form" style="display: none;">
+        <form method="POST" action="check_status.php">
+          <label for="track_reference">Enter Order Reference:</label>
+          <input type="text" id="track_reference" name="track_reference" required />
+          <button type="submit">Check Status</button>
+        </form>
+      </div>
+    </div>
+
+<script>
+  document.querySelector('.track-order-button').addEventListener('click', function() {
+    const form = document.querySelector('.track-order-form');
+    if (form.style.display === 'none') {
+      form.style.display = 'block';
+    } else {
+      form.style.display = 'none';
+    }
+  });
+  document.getElementById('getLocationBtn').addEventListener('click', function () {
+    const btn = this;
+    btn.disabled = true;
+    btn.innerText = "Getting location...";
+
+    if (!navigator.geolocation) {
+      alert("Geolocation is not supported by your browser.");
+      btn.innerText = "📍 Use Current Location";
+      btn.disabled = false;
+      return;
+    }
+
+    navigator.geolocation.getCurrentPosition(
+      function (position) {
+        const lat = position.coords.latitude;
+        const lon = position.coords.longitude;
+
+        // OpenCage API Call
+        const apiKey = '753e10258e0a4932851477e322627ced'; // <-- Replace with your real key
+        const apiUrl = `https://api.opencagedata.com/geocode/v1/json?q=${lat}+${lon}&key=${apiKey}`;
+
+        fetch(apiUrl)
+          .then(response => response.json())
+          .then(data => {
+            if (data && data.results && data.results.length > 0) {
+              const formatted = data.results[0].formatted;
+              document.getElementById('delivery_address').value = formatted;
+            } else {
+              alert("Unable to retrieve address.");
+            }
+            btn.innerText = "📍 Use Current Location";
+            btn.disabled = false;
+          })
+          .catch(error => {
+            console.error(error);
+            alert("Failed to retrieve address.");
+            btn.innerText = "📍 Use Current Location";
+            btn.disabled = false;
+          });
+      },
+      function (error) {
+        alert("Unable to retrieve location.");
+        btn.innerText = "📍 Use Current Location";
+        btn.disabled = false;
+      }
+    );
+  });
+</script>
+<script src="https://js.paystack.co/v1/inline.js"></script>
+<script src="script_basin_with_fee_fixed.js"></script>
+</body>
+</html>

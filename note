@@ -1,0 +1,26 @@
+//  Replace your-basin-endpoint with your actual Basin form endpoint.
+// It will look something like this:
+
+// https://usebasin.com/f/abc1234567
+
+//script_basin.js
+//No changes needed unless you want to change your Paystack test key.
+//Find this line:
+//key: 'pk_test_xxxxxxxxxxxxxxxxxxxxxxxx',
+
+ //send_sms.php
+//This file sends SMS through Africa’s Talking. You must replace these two lines with your actual credentials:
+
+//php
+//Copy
+//Edit
+//$username = "your_username";
+//$apiKey = "your_api_key";
+
+//Optional: Add Your Sender ID
+//If your Africa’s Talking account allows it, you can include a custom sender ID. Otherwise, your SMS may be sent with a generic number like “AFRICASTKNG”.
+
+replace social links with  yours
+ creat a catchy website html and css in diffrent folder just like kfc and it should contain a bottum for menu, and about us at the top which opens a diffrent page and the menu page should contain a option for custormer to select drinks and food where each drink and food has it price and add to cart bottom under which changes color when the mouse pointer is on it and after that be able to open cart and place order calculating the whole total and the detail of the customer will be sent to me as a text message for you have got an order and also to the database i created earlier and also link correctly to all my js and php files. and the place order should work with a paystack payment method just like this html file, make sure it still can work with my file 
+ and i want the customer detail form to contain a delivery or pick up option which will as for location or have a use current location bottom with hover effect if only delivery is selected
+ i want you to add an custormer details form that pops up after place oder is being clicked which will ask for name, location and leave a message for the order  and i want the customer detail form to contain a delivery or pick up option which will as for location or have a use current location bottom with hover effect if only delivery is selected and send it togerther with the oder to the database
